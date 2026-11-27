@@ -149,130 +149,128 @@ footer{text-align:center;padding:20px;color:#888;font-size:13px}
 </div></section>
 <footer>© 2026 Common Man Business TV - Ndimongang Ernest Chia | Your Success, Our Priority! | Bamenda, Cameroon</footer>
   
-<!-- COMMON MAN BUSINESS TV PRICING -->
+<!-- PRICING SECTION -->
 <section id="pricing" style="padding:60px 20px;background:#0a0a0a;color:#fff;text-align:center;font-family:Arial,sans-serif;">
 
   <h2 style="font-size:32px;margin-bottom:10px;">
     Choose Your <span style="color:#FFD700;">Plan</span>
   </h2>
 
-  <p style="color:#aaa;margin-bottom:25px;">
-    Grow Your Business With AI Video Marketing
+  <p style="color:#bbb;margin-bottom:25px;">
+    Grow your business with COMMON MAN BUSINESS TV.
   </p>
 
   <!-- MONTHLY / YEARLY TOGGLE -->
-  <div style="margin-bottom:35px;">
-    <button type="button" id="monthlyBtn"
-      style="padding:12px 25px;background:#FFD700;color:#000;border:0;border-radius:6px;font-weight:bold;cursor:pointer;"
-      onclick="setPricingBilling('monthly')">
+  <div style="display:flex;justify-content:center;gap:12px;margin-bottom:35px;">
+    <button type="button" id="cmbtv-monthly"
+      onclick="cmbtvSetBilling('monthly')"
+      style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:#FFD700;color:#000;font-weight:bold;cursor:pointer;">
       MONTHLY
     </button>
 
-    <button type="button" id="yearlyBtn"
-      style="padding:12px 25px;background:#333;color:#fff;border:0;border-radius:6px;font-weight:bold;cursor:pointer;margin-left:8px;"
-      onclick="setPricingBilling('yearly')">
+    <button type="button" id="cmbtv-yearly"
+      onclick="cmbtvSetBilling('yearly')"
+      style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:transparent;color:#fff;font-weight:bold;cursor:pointer;">
       YEARLY
     </button>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:1100px;margin:auto;">
 
-    <!-- FREE TRIAL -->
-    <div style="background:#171717;padding:25px;border:1px solid #444;border-radius:12px;">
-      <h3>FREE TRIAL</h3>
-      <h2 style="color:#FFD700;">$0</h2>
-      <p style="color:#aaa;">7 Days Free</p>
+    <!-- TRIAL PLAN -->
+    <div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
+      <h3 style="color:#FFD700;">TRIAL</h3>
+      <div style="font-size:40px;font-weight:bold;color:#FFD700;">$0</div>
+      <p>7 DAYS FREE</p>
       <hr>
       <p>1 Free Demo AI Video</p>
       <p>No setup fee</p>
       <p>No monthly payment</p>
       <p>No bank card required</p>
       <p>No automatic charging</p>
-      <a href="https://wa.me/237680569560"
-         style="display:block;background:#25D366;color:#fff;padding:12px;text-decoration:none;border-radius:6px;font-weight:bold;">
-        START FREE TRIAL
-      </a>
     </div>
 
-    <!-- STANDARD -->
-    <div style="background:#171717;padding:25px;border:1px solid #444;border-radius:12px;">
+    <!-- STANDARD PLAN -->
+    <div style="background:#171717;padding:25px;border:1px solid #FFD700;border-radius:15px;">
       <h3>STANDARD</h3>
-      <h2 class="pricing-amount" data-monthly="42" data-yearly="25" style="color:#FFD700;">$42</h2>
-      <p class="pricing-period" style="color:#aaa;">/ month</p>
+      <div class="cmbtv-price" data-monthly="42" data-yearly="25"
+        style="font-size:40px;font-weight:bold;color:#FFD700;">$42</div>
+      <p class="cmbtv-period">/ month</p>
       <hr>
-      <p>1 AI Video per month</p>
+      <p>1 AI Video Per Month</p>
       <p>WhatsApp Business Button</p>
       <p>Business Listing</p>
-      <a href="https://wa.me/237680569560"
-         style="display:block;background:#FFD700;color:#000;padding:12px;text-decoration:none;border-radius:6px;font-weight:bold;">
-        CHOOSE STANDARD
-      </a>
     </div>
 
-    <!-- PROFESSIONAL -->
-    <div style="background:#171717;padding:25px;border:2px solid #FFD700;border-radius:12px;">
-      <p style="color:#FFD700;font-weight:bold;">POPULAR PLAN</p>
+    <!-- PROFESSIONAL PLAN -->
+    <div style="background:#171717;padding:25px;border:2px solid #FFD700;border-radius:15px;">
+      <div style="background:#FFD700;color:#000;padding:8px;border-radius:5px;font-weight:bold;">
+        POPULAR PLAN
+      </div>
       <h3>PROFESSIONAL</h3>
-      <h2 class="pricing-amount" data-monthly="84" data-yearly="59" style="color:#FFD700;">$84</h2>
-      <p class="pricing-period" style="color:#aaa;">/ month</p>
+      <div class="cmbtv-price" data-monthly="84" data-yearly="59"
+        style="font-size:40px;font-weight:bold;color:#FFD700;">$84</div>
+      <p class="cmbtv-period">/ month</p>
       <hr>
-      <p>1 AI Video per month</p>
+      <p>1 AI Video Per Month</p>
       <p>Social Media Promotion</p>
       <p>Homepage Placement</p>
-      <a href="https://wa.me/237680569560"
-         style="display:block;background:#FFD700;color:#000;padding:12px;text-decoration:none;border-radius:6px;font-weight:bold;">
-        CHOOSE PROFESSIONAL
-      </a>
     </div>
 
-    <!-- PREMIUM -->
-    <div style="background:#171717;padding:25px;border:1px solid #444;border-radius:12px;">
+    <!-- PREMIUM PLAN -->
+    <div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
       <h3>PREMIUM</h3>
-      <h2 class="pricing-amount" data-monthly="168" data-yearly="99" style="color:#FFD700;">$168</h2>
-      <p class="pricing-period" style="color:#aaa;">/ month</p>
+      <div class="cmbtv-price" data-monthly="168" data-yearly="99"
+        style="font-size:40px;font-weight:bold;color:#FFD700;">$168</div>
+      <p class="cmbtv-period">/ month</p>
       <hr>
-      <p>Premium AI Video Services</p>
-      <p>Business Promotion</p>
-      <p>Priority Visibility</p>
-      <p>Premium Business Support</p>
-      <a href="https://wa.me/237680569560"
-         style="display:block;background:#FFD700;color:#000;padding:12px;text-decoration:none;border-radius:6px;font-weight:bold;">
-        CHOOSE PREMIUM
-      </a>
+      <p>Premium Business Visibility</p>
+      <p>Priority Business Promotion</p>
+      <p>Enhanced Business Exposure</p>
     </div>
 
   </div>
 </section>
 
-<!-- WORKING PRICING TOGGLE -->
+<!-- MONTHLY / YEARLY TOGGLE SCRIPT -->
 <script>
 (function () {
-  function setPricingBilling(type) {
-    var section = document.getElementById('pricing');
-    if (!section) return;
+  function cmbtvSetBilling(type) {
 
-    section.querySelectorAll('.pricing-amount').forEach(function(price) {
-      price.textContent = '$' + price.getAttribute('data-' + type);
+    if (type !== "monthly" && type !== "yearly") return;
+
+    // Change all plan prices immediately
+    document.querySelectorAll("#pricing .cmbtv-price").forEach(function(price) {
+      var amount = price.getAttribute("data-" + type);
+      if (amount !== null) {
+        price.textContent = "$" + amount;
+      }
     });
 
-    section.querySelectorAll('.pricing-period').forEach(function(period) {
-      period.textContent = type === 'yearly'
-        ? '/ mo - billed yearly'
-        : '/ month';
+    // Change billing descriptions
+    document.querySelectorAll("#pricing .cmbtv-period").forEach(function(period) {
+      period.textContent = type === "yearly"
+        ? "/ mo - billed yearly"
+        : "/ month";
     });
 
-    var monthly = document.getElementById('monthlyBtn');
-    var yearly = document.getElementById('yearlyBtn');
+    // Update button appearance
+    var monthly = document.getElementById("cmbtv-monthly");
+    var yearly = document.getElementById("cmbtv-yearly");
 
-    monthly.style.background = type === 'monthly' ? '#FFD700' : '#333';
-    monthly.style.color = type === 'monthly' ? '#000' : '#fff';
+    monthly.style.background = type === "monthly" ? "#FFD700" : "transparent";
+    monthly.style.color = type === "monthly" ? "#000" : "#fff";
 
-    yearly.style.background = type === 'yearly' ? '#FFD700' : '#333';
-    yearly.style.color = type === 'yearly' ? '#000' : '#fff';
+    yearly.style.background = type === "yearly" ? "#FFD700" : "transparent";
+    yearly.style.color = type === "yearly" ? "#000" : "#fff";
   }
 
-  window.setPricingBilling = setPricingBilling;
-  setPricingBilling('monthly');
+  // Make function available to the buttons
+  window.cmbtvSetBilling = cmbtvSetBilling;
+
+  // Default display
+  cmbtvSetBilling("monthly");
+
 })();
 </script>
 
