@@ -314,12 +314,12 @@ el.textContent = "$" + cmbtvPlans[plan][cmbtvBilling];
 });
 
 document.querySelectorAll("#pricing .cmbtv-period").forEach(function(el){
-el.textContent = type==="yearly" ? "/ month — billed yearly" : "/ month — billed monthly";
+el.textContent = type==="yearly" ? "/ year : "/ month — billed monthly";
 });
 
 document.querySelectorAll("#pricing .cmbtv-annual").forEach(function(el){
 var plan = el.parentElement.querySelector("h3").textContent.trim();
-el.textContent = "Annual subscription: $" + (cmbtvPlans[plan].monthly*12) + " / year";
+el.textContent = "Annual subscription: $" + (cmbtvPlans[plan].yearly) + " / year";
 el.style.display = type==="yearly" ? "block" : "none";
 });
 
