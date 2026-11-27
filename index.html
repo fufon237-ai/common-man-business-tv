@@ -360,7 +360,7 @@ priceText = "One-time setup fee: $" + d.setup;
 
 if(cmbtvBilling==="yearly"){
 
-var annual = d.monthly*12;
+var annual = d.yearly;
 priceText += "\nAnnual subscription: $" + annual;
 priceText += "\nFirst-year total: $" + (d.setup+annual);
 billingText = "Setup fee is paid once. Subscription covers 12 months upfront.";
