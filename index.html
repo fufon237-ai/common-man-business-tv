@@ -182,127 +182,265 @@ footer{text-align:center;padding:20px;color:#888;font-size:13px}
 </div></section>
 <footer>© 2026 Common Man Business TV - Ndimongang Ernest Chia | Your Success, Our Priority! | Bamenda, Cameroon</footer>
   
+
 <!-- PRICING SECTION -->
 <section id="pricing" style="padding:60px 20px;background:#0a0a0a;color:#fff;text-align:center;font-family:Arial,sans-serif;">
 
-  <h2 style="font-size:32px;margin-bottom:10px;">
-    Choose Your <span style="color:#FFD700;">Plan</span>
-  </h2>
+<h2 style="font-size:32px;margin-bottom:10px;">Choose Your <span style="color:#FFD700;">Plan</span></h2>
+<p style="color:#bbb;margin-bottom:25px;">Grow your business with COMMON MAN BUSINESS TV.</p>
 
-  <p style="color:#bbb;margin-bottom:25px;">
-    Grow your business with COMMON MAN BUSINESS TV.
-  </p>
+<!-- BILLING TOGGLE -->
+<div style="display:flex;justify-content:center;gap:12px;margin-bottom:25px;">
+<button type="button" id="cmbtv-monthly" onclick="cmbtvSetBilling('monthly')" style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:#FFD700;color:#000;font-weight:bold;cursor:pointer;">MONTHLY</button>
+<button type="button" id="cmbtv-yearly" onclick="cmbtvSetBilling('yearly')" style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:transparent;color:#fff;font-weight:bold;cursor:pointer;">YEARLY</button>
+</div>
 
-  <!-- MONTHLY / YEARLY TOGGLE -->
-  <div style="display:flex;justify-content:center;gap:12px;margin-bottom:35px;">
-    <button type="button" id="cmbtv-monthly"
-      onclick="cmbtvSetBilling('monthly')"
-      style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:#FFD700;color:#000;font-weight:bold;cursor:pointer;">
-      MONTHLY
-    </button>
+<p id="cmbtv-billing-description" style="color:#bbb;margin-bottom:30px;">Monthly subscription payments.</p>
 
-    <button type="button" id="cmbtv-yearly"
-      onclick="cmbtvSetBilling('yearly')"
-      style="padding:13px 28px;border:2px solid #FFD700;border-radius:30px;background:transparent;color:#fff;font-weight:bold;cursor:pointer;">
-      YEARLY
-    </button>
-  </div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:1100px;margin:auto;">
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:1100px;margin:auto;">
+<!-- TRIAL -->
+<div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
+<h3 style="color:#FFD700;">TRIAL</h3>
+<div style="font-size:40px;font-weight:bold;color:#FFD700;">$0</div>
+<p>7 DAYS FREE</p><hr>
+<p>1 Free Demo AI Video</p>
+<p>No setup fee</p>
+<p>No monthly payment</p>
+<p>No bank card required</p>
+<p>No automatic charging</p>
+<button type="button" onclick="cmbtvChoosePlan('TRIAL')" style="width:100%;padding:14px;margin-top:20px;background:#FFD700;color:#000;border:0;border-radius:30px;font-weight:bold;cursor:pointer;">CHOOSE PLAN</button>
+</div>
 
-    <!-- TRIAL PLAN -->
-    <div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
-      <h3 style="color:#FFD700;">TRIAL</h3>
-      <div style="font-size:40px;font-weight:bold;color:#FFD700;">$0</div>
-      <p>7 DAYS FREE</p>
-      <hr>
-      <p>1 Free Demo AI Video</p>
-      <p>No setup fee</p>
-      <p>No monthly payment</p>
-      <p>No bank card required</p>
-      <p>No automatic charging</p>
-    </div>
+<!-- STANDARD -->
+<div style="background:#171717;padding:25px;border:1px solid #FFD700;border-radius:15px;">
+<h3>STANDARD</h3>
+<div style="font-size:30px;font-weight:bold;color:#FFD700;">$42 Setup Fee</div>
+<div class="cmbtv-price" data-monthly="25" style="font-size:36px;font-weight:bold;color:#FFD700;">$25</div>
+<p class="cmbtv-period">/ month</p>
+<p class="cmbtv-annual" style="display:none;color:#bbb;"></p>
+<hr>
+<p>1 AI Video Per Month</p>
+<p>WhatsApp Business Button</p>
+<p>Business Listing</p>
+<button type="button" onclick="cmbtvChoosePlan('STANDARD')" style="width:100%;padding:14px;margin-top:20px;background:#FFD700;color:#000;border:0;border-radius:30px;font-weight:bold;cursor:pointer;">CHOOSE PLAN</button>
+</div>
 
-    <!-- STANDARD PLAN -->
-    <div style="background:#171717;padding:25px;border:1px solid #FFD700;border-radius:15px;">
-      <h3>STANDARD</h3>
-      <div class="cmbtv-price" data-monthly="42" data-yearly="25"
-        style="font-size:40px;font-weight:bold;color:#FFD700;">$42</div>
-      <p class="cmbtv-period">/ month</p>
-      <hr>
-      <p>1 AI Video Per Month</p>
-      <p>WhatsApp Business Button</p>
-      <p>Business Listing</p>
-    </div>
+<!-- PROFESSIONAL -->
+<div style="background:#171717;padding:25px;border:2px solid #FFD700;border-radius:15px;">
+<div style="background:#FFD700;color:#000;padding:8px;border-radius:5px;font-weight:bold;">POPULAR PLAN</div>
+<h3>PROFESSIONAL</h3>
+<div style="font-size:30px;font-weight:bold;color:#FFD700;">$84 Setup Fee</div>
+<div class="cmbtv-price" data-monthly="59" style="font-size:36px;font-weight:bold;color:#FFD700;">$59</div>
+<p class="cmbtv-period">/ month</p>
+<p class="cmbtv-annual" style="display:none;color:#bbb;"></p>
+<hr>
+<p>4 AI Videos Per Month</p>
+<p>Social Media Promotion</p>
+<p>Homepage Placement</p>
+<button type="button" onclick="cmbtvChoosePlan('PROFESSIONAL')" style="width:100%;padding:14px;margin-top:20px;background:#FFD700;color:#000;border:0;border-radius:30px;font-weight:bold;cursor:pointer;">CHOOSE PLAN</button>
+</div>
 
-    <!-- PROFESSIONAL PLAN -->
-    <div style="background:#171717;padding:25px;border:2px solid #FFD700;border-radius:15px;">
-      <div style="background:#FFD700;color:#000;padding:8px;border-radius:5px;font-weight:bold;">
-        POPULAR PLAN
-      </div>
-      <h3>PROFESSIONAL</h3>
-      <div class="cmbtv-price" data-monthly="84" data-yearly="59"
-        style="font-size:40px;font-weight:bold;color:#FFD700;">$84</div>
-      <p class="cmbtv-period">/ month</p>
-      <hr>
-      <p>1 AI Video Per Month</p>
-      <p>Social Media Promotion</p>
-      <p>Homepage Placement</p>
-    </div>
+<!-- PREMIUM -->
+<div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
+<h3>PREMIUM</h3>
+<div style="font-size:30px;font-weight:bold;color:#FFD700;">$168 Setup Fee</div>
+<div class="cmbtv-price" data-monthly="99" style="font-size:36px;font-weight:bold;color:#FFD700;">$99</div>
+<p class="cmbtv-period">/ month</p>
+<p class="cmbtv-annual" style="display:none;color:#bbb;"></p>
+<hr>
+<p>Premium Business Visibility</p>
+<p>Priority Business Promotion</p>
+<p>Enhanced Business Exposure</p>
+<button type="button" onclick="cmbtvChoosePlan('PREMIUM')" style="width:100%;padding:14px;margin-top:20px;background:#FFD700;color:#000;border:0;border-radius:30px;font-weight:bold;cursor:pointer;">CHOOSE PLAN</button>
+</div>
 
-    <!-- PREMIUM PLAN -->
-    <div style="background:#171717;padding:25px;border:1px solid #555;border-radius:15px;">
-      <h3>PREMIUM</h3>
-      <div class="cmbtv-price" data-monthly="168" data-yearly="99"
-        style="font-size:40px;font-weight:bold;color:#FFD700;">$168</div>
-      <p class="cmbtv-period">/ month</p>
-      <hr>
-      <p>Premium Business Visibility</p>
-      <p>Priority Business Promotion</p>
-      <p>Enhanced Business Exposure</p>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- MONTHLY / YEARLY TOGGLE SCRIPT -->
+<!-- CUSTOMER FORM -->
+<div id="cmbtv-form-container" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;overflow-y:auto;padding:20px;">
+<div style="background:#171717;color:#fff;max-width:450px;margin:40px auto;padding:25px;border:2px solid #FFD700;border-radius:15px;">
+
+<h2 style="color:#FFD700;margin-bottom:10px;">Complete Your Details</h2>
+<p style="color:#bbb;margin-bottom:20px;">Fill in your information to continue on WhatsApp.</p>
+
+<form id="cmbtv-customer-form" onsubmit="return cmbtvConfirmWhatsApp(event)">
+
+<label style="display:block;text-align:left;margin-bottom:7px;">Your Name</label>
+<input type="text" id="cmbtv-name" required placeholder="Enter your full name" style="width:100%;padding:14px;margin-bottom:18px;border:1px solid #777;border-radius:8px;font-size:16px;">
+
+<label style="display:block;text-align:left;margin-bottom:7px;">Phone Number</label>
+<input type="tel" id="cmbtv-phone" required placeholder="Enter your phone number" style="width:100%;padding:14px;margin-bottom:18px;border:1px solid #777;border-radius:8px;font-size:16px;">
+
+<label style="display:block;text-align:left;margin-bottom:7px;">Selected Plan</label>
+<input type="text" id="cmbtv-selected-plan" readonly style="width:100%;padding:14px;margin-bottom:18px;background:#333;color:#FFD700;border:1px solid #777;border-radius:8px;font-size:16px;">
+
+<div style="background:#292929;padding:12px;border-radius:8px;margin-bottom:20px;text-align:left;">
+<p id="cmbtv-form-price" style="color:#FFD700;font-weight:bold;white-space:pre-line;"></p>
+<p id="cmbtv-form-billing" style="color:#ccc;font-size:13px;margin-top:8px;"></p>
+</div>
+
+<button type="submit" style="width:100%;padding:15px;background:#25D366;color:#fff;border:0;border-radius:30px;font-size:16px;font-weight:bold;cursor:pointer;">CONFIRM ON WHATSAPP</button>
+
+<button type="button" onclick="cmbtvCloseForm()" style="width:100%;padding:13px;margin-top:12px;background:#444;color:#fff;border:0;border-radius:30px;font-weight:bold;cursor:pointer;">CANCEL</button>
+
+</form>
+</div>
+</div>
+
+<!-- SCRIPT -->
 <script>
-(function () {
-  function cmbtvSetBilling(type) {
+(function(){
 
-    if (type !== "monthly" && type !== "yearly") return;
+var cmbtvBilling = "monthly";
+var cmbtvSelectedPlan = "";
 
-    // Change all plan prices immediately
-    document.querySelectorAll("#pricing .cmbtv-price").forEach(function(price) {
-      var amount = price.getAttribute("data-" + type);
-      if (amount !== null) {
-        price.textContent = "$" + amount;
-      }
-    });
+var cmbtvPlans = {
+STANDARD:{setup:42,monthly:25},
+PROFESSIONAL:{setup:84,monthly:59},
+PREMIUM:{setup:168,monthly:99}
+};
 
-    // Change billing descriptions
-    document.querySelectorAll("#pricing .cmbtv-period").forEach(function(period) {
-      period.textContent = type === "yearly"
-        ? "/ mo - billed yearly"
-        : "/ month";
-    });
+window.cmbtvSetBilling = function(type){
 
-    // Update button appearance
-    var monthly = document.getElementById("cmbtv-monthly");
-    var yearly = document.getElementById("cmbtv-yearly");
+if(type!=="monthly" && type!=="yearly") return;
 
-    monthly.style.background = type === "monthly" ? "#FFD700" : "transparent";
-    monthly.style.color = type === "monthly" ? "#000" : "#fff";
+cmbtvBilling = type;
 
-    yearly.style.background = type === "yearly" ? "#FFD700" : "transparent";
-    yearly.style.color = type === "yearly" ? "#000" : "#fff";
-  }
+document.querySelectorAll("#pricing .cmbtv-price").forEach(function(el){
+var plan = el.parentElement.querySelector("h3").textContent.trim();
+el.textContent = "$" + cmbtvPlans[plan].monthly;
+});
 
-  // Make function available to the buttons
-  window.cmbtvSetBilling = cmbtvSetBilling;
+document.querySelectorAll("#pricing .cmbtv-period").forEach(function(el){
+el.textContent = type==="yearly" ? "/ month — billed yearly" : "/ month — billed monthly";
+});
 
-  // Default display
-  cmbtvSetBilling("monthly");
+document.querySelectorAll("#pricing .cmbtv-annual").forEach(function(el){
+var plan = el.parentElement.querySelector("h3").textContent.trim();
+el.textContent = "Annual subscription: $" + (cmbtvPlans[plan].monthly*12) + " / year";
+el.style.display = type==="yearly" ? "block" : "none";
+});
+
+document.getElementById("cmbtv-billing-description").textContent =
+type==="yearly"
+? "Yearly billing: Pay your 12-month subscription upfront. Setup fee is separate."
+: "Monthly billing: Pay your setup fee once, then your subscription monthly.";
+
+var m = document.getElementById("cmbtv-monthly");
+var y = document.getElementById("cmbtv-yearly");
+
+m.style.background = type==="monthly" ? "#FFD700" : "transparent";
+m.style.color = type==="monthly" ? "#000" : "#fff";
+y.style.background = type==="yearly" ? "#FFD700" : "transparent";
+y.style.color = type==="yearly" ? "#000" : "#fff";
+
+};
+
+window.cmbtvChoosePlan = function(plan){
+
+if(plan!=="TRIAL" && !cmbtvPlans[plan]) return;
+
+cmbtvSelectedPlan = plan;
+document.getElementById("cmbtv-selected-plan").value = plan;
+
+var priceText;
+var billingText;
+
+if(plan==="TRIAL"){
+
+priceText = "Total Price: $0";
+billingText = "7 days free. No setup fee or payment required.";
+
+}else{
+
+var d = cmbtvPlans[plan];
+priceText = "One-time setup fee: $" + d.setup;
+
+if(cmbtvBilling==="yearly"){
+
+var annual = d.monthly*12;
+priceText += "\nAnnual subscription: $" + annual;
+priceText += "\nFirst-year total: $" + (d.setup+annual);
+billingText = "Setup fee is paid once. Subscription covers 12 months upfront.";
+
+}else{
+
+priceText += "\nMonthly subscription: $" + d.monthly;
+priceText += "\nFirst payment: $" + (d.setup+d.monthly);
+billingText = "After the first payment, monthly subscription is $" + d.monthly + ".";
+
+}
+}
+
+document.getElementById("cmbtv-form-price").textContent = priceText;
+document.getElementById("cmbtv-form-billing").textContent = billingText;
+document.getElementById("cmbtv-form-container").style.display = "block";
+
+};
+
+window.cmbtvCloseForm = function(){
+document.getElementById("cmbtv-form-container").style.display = "none";
+};
+
+window.cmbtvConfirmWhatsApp = function(event){
+
+event.preventDefault();
+
+var name = document.getElementById("cmbtv-name").value.trim();
+var phone = document.getElementById("cmbtv-phone").value.trim();
+
+if(!name || !phone || !cmbtvSelectedPlan){
+alert("Please complete all required fields.");
+return false;
+}
+
+var message =
+"Hello COMMON MAN BUSINESS TV!\n\n"+
+"I want to choose a plan.\n\n"+
+"Customer Name: "+name+"\n"+
+"Phone Number: "+phone+"\n"+
+"Selected Plan: "+cmbtvSelectedPlan+"\n";
+
+if(cmbtvSelectedPlan==="TRIAL"){
+
+message += "Billing: 7 DAYS FREE\nSetup Fee: $0\nPrice: FREE\n";
+
+}else{
+
+var d = cmbtvPlans[cmbtvSelectedPlan];
+
+message +=
+"Billing: "+cmbtvBilling.toUpperCase()+"\n"+
+"One-time Setup Fee: $"+d.setup+"\n";
+
+if(cmbtvBilling==="yearly"){
+
+message +=
+"Annual Subscription: $"+(d.monthly*12)+"\n"+
+"First-Year Total: $"+(d.setup+d.monthly*12)+"\n";
+
+}else{
+
+message +=
+"Monthly Subscription: $"+d.monthly+"\n"+
+"First Payment: $"+(d.setup+d.monthly)+"\n";
+
+}
+}
+
+message += "\nPlease guide me on the next steps. Thank you!";
+
+var url = "https://wa.me/237680569560?text="+encodeURIComponent(message);
+
+window.location.href = url;
+
+return false;
+
+};
+
+cmbtvSetBilling("monthly");
 
 })();
 </script>
