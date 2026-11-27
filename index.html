@@ -314,7 +314,7 @@ el.textContent = "$" + cmbtvPlans[plan][cmbtvBilling];
 });
 
 document.querySelectorAll("#pricing .cmbtv-period").forEach(function(el){
-el.textContent = type==="yearly" ? "/ year : "/ month — billed monthly";
+el.textContent = type==="yearly" ? "/ year" : "/ month — billed monthly";
 });
 
 document.querySelectorAll("#pricing .cmbtv-annual").forEach(function(el){
