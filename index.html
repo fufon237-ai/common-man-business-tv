@@ -297,9 +297,9 @@ var cmbtvBilling = "monthly";
 var cmbtvSelectedPlan = "";
 
 var cmbtvPlans = {
-STANDARD:{setup:42,monthly:25},
-PROFESSIONAL:{setup:84,monthly:59},
-PREMIUM:{setup:168,monthly:99}
+STANDARD:{setup:42,monthly:25, yearly:250},
+PROFESSIONAL:{setup:84,monthly:59, yearly:590},
+PREMIUM:{setup:168,monthly:99, yearly:990}
 };
 
 window.cmbtvSetBilling = function(type){
@@ -310,7 +310,7 @@ cmbtvBilling = type;
 
 document.querySelectorAll("#pricing .cmbtv-price").forEach(function(el){
 var plan = el.parentElement.querySelector("h3").textContent.trim();
-el.textContent = "$" + cmbtvPlans[plan].monthly;
+el.textContent = "$" + cmbtvPlans[plan][cmbtvBilling];
 });
 
 document.querySelectorAll("#pricing .cmbtv-period").forEach(function(el){
